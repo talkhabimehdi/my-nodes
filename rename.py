@@ -1,12 +1,12 @@
 import os
 
-# مهدی تلخبی
-CUSTOM_NAME = "MyConfig"
+# نام دلخواه شما همراه با ایموجی قلب قرمز
+CUSTOM_NAME = "مهدی تلخابی ❤️"
 
-# نام دقیق فایل فعلی شما در گیت‌هاب
+# نام فایل کانفیگ‌های خام در مخزن شما
 INPUT_FILE = "configsmehdi.txt" 
 
-# نام فایلی که کانفیگ‌های تغییر نام یافته در آن ذخیره می‌شوند
+# نام فایلی که کانفیگ‌های جدید در آن ذخیره می‌شوند
 OUTPUT_FILE = "output.txt"
 
 def update_configs():
@@ -22,6 +22,7 @@ def update_configs():
     for line in lines:
         line = line.strip()
         if line and "#" in line:
+            # جدا کردن آدرس اصلی کانفیگ و اضافه کردن اسم جدید
             base_url = line.split("#")[0]
             new_line = f"{base_url}#{CUSTOM_NAME}-{count}"
             new_lines.append(new_line)
